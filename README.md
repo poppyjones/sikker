@@ -1,2 +1,3 @@
 # sikker
-sikre noter til sikkerhed på itu
+
+Notes from the sec1 course at ITU - pre-pandemic
