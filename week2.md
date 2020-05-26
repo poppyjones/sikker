@@ -1,8 +1,8 @@
-# Week 1
+# Week 2
 
 ## Denial of Service Attacks
 
-An attack on availablitiy by hindering or blocking the provision of a service. Exhausts critical resource of a service, CPU, memory, bandwidth, diskspace.
+An attack on availablitiy by hindering or blocking the provision of a service. Exhausts critical resource of a service, CPU, memory, bandwidth, disc space.
 
 DDoS have increased in size (intensity) over the years. from a few hundred mbps in 2002 to 600 gbps in 2015 (BBC). Although the intensity and severity varies a lot, most attacks last for 30 minutes or less.  Sometimes DDoS can be used as a diversion while another more severe attack is going on somewhere else.
 
@@ -15,12 +15,12 @@ DDoS have increased in size (intensity) over the years. from a few hundred mbps 
   - Usually aims to overload or even crash the network handling software. Rather than simply consuming bandwidth.
   - Might aim any temporary buffers to hold arriving packets or tables of open connections, etc.
     - eks. SYN spoofing.
-  - Might use packets whose struture trigger a bug in the system which cause a crash which will  require a reboot to make the comm system work again.
+  - Might use packets whose structure trigger a bug in the system which causes a crash which will require a reboot to make the comm system work again.
     - poison packet: ex: ping of death, teardrop
 - Application resources
   - such as a web server.
   - **Cyberslam**: using complex requests to a DB to consume significant resources and thereby limit nr of valid requests.
-  - Else target the actual server. So it canøt used until reboot.
+  - Else target the actual server. So it can't be used until reboot.
 
 ### Classic DoS attack
 
@@ -28,7 +28,7 @@ A flooding attack on an organisation. If the adversary has access to a higher ca
 
     ping -f -s 65507
 
-However, the source of the ping attack is clearly identified, as the source address in the ICMP echo request packets. This has another disadvantage: the attakkee can respond to the attacker and deflect the incoming messages. Therefore the attacker MUST use a falsified or spoofed!
+However, the source of the ping attack is clearly identified, as the source address in the ICMP echo request packets. This has another disadvantage (for the attacker): the victim can respond to the attacker and deflect the incoming messages. Therefore the attacker MUST use a falsified or spoofed!
 
 ### Source address spoofing
 
@@ -36,7 +36,7 @@ Just means a *forged* source address.
 
 Often done by using the *raw socket interface* on many OS', who's purpose was originally for network protocol testing and whatnot.
 
-Since TCP/IP where developed in a "generally cooperative environment" (and by people who had the priviledge of not needing provacy and protection) the protocpls have no built in measure to safegaurd against false addresses.
+Since TCP/IP where developed in a "generally cooperative environment" (and by people who had the priviledge of not needing privacy and protection) the protcols have no built in measure to safegaurd against false addresses.
 
 #### egress filtering
 
@@ -59,7 +59,7 @@ Common flooding attacks use ICMP, UDP or TPC SYN packet types, although it is al
 
 ### ICMP flood
 
-Ping flood using ICMP echo requests. Often allowed through since network admins traditionally used the for diagnostic reasons. Recently many networks donøt let them through firewalls. Attackers therefor use other types of ICMP packets since filtering them would be detrimental for correctly functioning TCP/IP.
+Ping flood using ICMP echo requests. Often allowed through since network admins traditionally used the for diagnostic reasons. Recently many networks don't let them through firewalls. Attackers therefor use other types of ICMP packets since filtering them would be detrimental for correctly functioning TCP/IP.
 
 ### UDP flood
 
@@ -69,11 +69,11 @@ Directed at some port number and thereby a potential service on the target syste
 
 Basically the SYN spoof mentioned above, however here the goal is the sheer volume of data/requests.
 
-Defence: By selctive drop or random drop, when the system would overflow. The dropped connection would most likely be an attacker.
+Defence: By selective drop or random drop, when the system would overflow. The dropped connection would most likely be an attacker.
 
 #### RST spoofing
 
-Sequence numbers are sent in leartext which allows eavesdropping or tampering. by changing the RST bit to drop the connection to another system. This way the system will keep sending packets to the server or system wo knowing that the server is not receiving them.
+Sequence numbers are sent in cleartext which allows eavesdropping or tampering. by changing the RST bit to drop the connection to another system. This way the system will keep sending packets to the server or system wo knowing that the server is not receiving them.
 
 ## DDoS
 
@@ -90,7 +90,7 @@ Ususally there is a control hierarchy st the attacker doesn't control each zombi
 ### Tribe Flood Network
 
 TFN is an early and well known DDoS tool.
-Did not spoof  simly relied on a large nr of compromised systems and a layered command structure to hide the path to the attacker.
+Did not spoof, simply relied on a large nr of compromised systems and a layered command structure to hide the path to the attacker.
 
 ### Newer tools
 
@@ -102,7 +102,7 @@ A strategy to perform a DoS attack is to force the target to execute resource co
 
 ### SIP flood
 
-Voice over IP telephony is wodely deployed all over the internet (is this what is used in skype and whatnot???) it uses a Session Initiation Protocol to establish the call setup. SIP uses syntax similar to HTTP. SIP INVITE is used to establish media session. Uses a proxy server to get the DNS of the recipient. A SIP flood floods the proxy server with INVITE requests from spoofed addresses. Meking the system unusable for ligitimate calls.
+Voice over IP telephony is widely deployed all over the internet (is this what is used in skype and whatnot???) it uses a Session Initiation Protocol to establish the call setup. SIP uses syntax similar to HTTP. SIP INVITE is used to establish media session. Uses a proxy server to get the DNS of the recipient. A SIP flood floods the proxy server with INVITE requests from spoofed addresses. Making the system unusable for ligitimate calls.
 
 ### HTTP based attacks
 
@@ -113,7 +113,7 @@ bombard web servers with HTTP requests. ex. a request to download large files wh
 #### Slowloris
 
 Attack a webserver by using up threads by posting incomplete requests.
-Different than other HTTP attacks sinc it uses legitimate HTTP traffic rather than bug-inducing "bad" HTTP requests.
+Different than other HTTP attacks since it uses legitimate HTTP traffic rather than bug-inducing "bad" HTTP requests.
 
 Counter measures:
 
@@ -165,7 +165,7 @@ Same as reflection but uses intermediaries that respond w multiple packets for e
 
 ### Dolev-Yao
 
-Owníng the cable that the data is running through (basically)
+Owning the cable that the data is running through (basically)
 
 ### Security of the physical layer
 
@@ -175,7 +175,7 @@ Owníng the cable that the data is running through (basically)
 
 ### Security of the Data-link layer
 
-Media Access Control (MAC) can be changes easily.
+Media Access Control (MAC) can be changed easily.
 Checksums are also possible to avoid.. checksums are 32-bit
 they are not cryptographic in design, they are build
 switches.
@@ -186,7 +186,7 @@ switches.
 
 ### Security in the network layer
 
-Hosts are identified by IP addresses. Unreliable delivery, may introduce pakcet dup and out for order msgs.
+Hosts are identified by IP addresses. Unreliable delivery, may introduce packet dump and out for order msgs.
 
 IP operations:
 
@@ -230,7 +230,7 @@ Selectively block some connections or filter packets based on contents (src/trg 
   - by physically blocking access to local network except. via the firewall.
 - Only authorised traffic may pass as defined by local policy
   - Based on:
-    - IP address nad protocol values
+    - IP address and protocol values
     - application protocol (application level gateway)
     - user identity
     - network activity
@@ -260,7 +260,7 @@ limitation:
 
 ### Basing
 
-Firewalls can be based on a stannd alone maching running a common OS, or kan be implemented as a softwrare module in a router or LAN switch or server.
+Firewalls can be based on a stand alone maching running a common OS, or can be implemented as a softwrare module in a router or LAN switch or server.
 
 #### Bastion host
 
@@ -268,19 +268,19 @@ A system identified as a critial stong point of the networks security. Platform 
 
 - Uses secure OS
 - only has what services are deamed essential.
-  - could by proxy applicatins for DNS, FTP, HTTP, SMTP
+  - could by proxy applications for DNS, FTP, HTTP, SMTP
   - only the essential subset of the applications normal command set
-- requires additional authentication to acces these proxyservices
+- requires additional authentication to access these proxy services
 - each proxy maintains detailed logs
   - traffic
   - each connecttion
     - duration of each connection
 - stays within the economy of mechanisms
-- each proxy is independnat of the others, minimising system wide failure
+- each proxy is independant of the others, minimising system wide failure
 - should perform no disk access other than the initial onfig.
-  - makes installing trojan sniffers diffeícult
+  - makes installing trojan sniffers difficult
 
-#### host based firewalls
+#### Host based firewalls
 
 Software module used to secure a single host. FIltering rules can be tailored for user. Independant of topology (both internal and external attacks must pass through the firewall). Easier to add on new servers w their own firewall wo altering anything else in the network.
 
@@ -298,7 +298,7 @@ Software module on personal computer. Less complex
 
 ### DMZ
 
-Demilitarized zone is sandwiched between an external and internal firewall. The external provides a measure of access control and protection for the dmz and the rest of the enterprise network. The internal firewall adds more stingent protection, it provides two-way protection between the enterprise network and DMZ. The servers and workstations are protected from attacks launched via the DMZ systems (worms, and other nasties). It also protect the DMZ systems from internal attacks.
+Demilitarized zone is sandwiched between an external and internal firewall. The external provides a measure of access control and protection for the dmz and the rest of the enterprise network. The internal firewall adds more stingent protection, it provides two-way protection between the enterprise network and DMZ. The servers and workstations are protected from attacks launched via the DMZ systems (worms, and other nasties). It also protects the DMZ systems from internal attacks.
 
 ### Virtual Private Networks
 
@@ -306,11 +306,11 @@ Consists of a set of computers that interconnect by means of relatively unsecure
 
 ### Distributed firewalls
 
-involves a stand alone firewall devices working together w host based firewalls under admin control. security monitoring is important, i guess because a lot of things arre going on simultainously.
+involves a stand alone firewall devices working together w host based firewalls under admin control. Security monitoring is important, i guess because a lot of things are going on simultainously.
 
-### Other fireall stuff
+### Other firewall stuff
 
-Host-resident: includes personal firewall software and software on servers, both ohys and virt.
+Host-resident: includes personal firewall software and software on servers, both physical and virtual.
 
 Screening router: single router between external and internal networks. typically for small buisness or personal use.
 

@@ -58,7 +58,7 @@ Although perceived s though they are equally trusted and well-managed all CAs in
 
 ## Lecture notes
 
-> nonces: random umbers that are only used once. for freshness
+> nonces: random numbers that are only used once. for freshness
 
 dolev-yao: controls network, but can't break cryptography. Diffie-hellman is not good enough since M can drop the authentication messages and generate own keys to act as a man-in-the-middle attack. this also negates confidentiality since A and B encrypt useing the keys coming from M.
 

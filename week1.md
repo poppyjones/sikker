@@ -69,7 +69,7 @@ Something happens which leads to an entity gaining info that it is not authorisa
 
 #### Deception
 
-A threat to system- or data integrity. By making entities beleave something false is true (not in the boolean sense).
+A threat to system- or data integrity. By making entities believe something false is true (not in the boolean sense).
 
 - **Masquerage**: Gaining access by posing as a authorised user. (Simply knowing the username and password or more advanced like a trojan horse)
 - **Falseification**: Altering/replacing data with false data. (entering own grades to learnit).
@@ -79,7 +79,7 @@ A threat to system- or data integrity. By making entities beleave something fals
 
 Threat to the availability or system integrity. Interuption or preventing the system to operate correctly.
 
-- **Incapacitation**: Attack on system availibity by disabling a component. Could be physical harm to hardware, more commonly Trojan horse, virus, worm that disable the system.
+- **Incapacitation**: Attack on system availibity by disabling a component. Could be physical harm to hardware, more commonly Trojan horse, virus, worm that disable the system. (ex. stuxnet)
 - **Corruption**: Attack on integrity; altering system operation by altering functions or data. This could be many things, one example is leaving a backdoor.
 - **Obstruction**: Obstruction communications. Snip snip or overloading the comm system (dos).
 
@@ -93,9 +93,9 @@ Threat to integrity. An event that leads to an unauthorised entity gains control
 ### Types of Attacks
 
 - Active
-  - attempts to aler system resources or affect operations
+  - attempts to alter system resources or affect operations
 - Passive
-  - attemps to learn and/or make use of information from the system but does not alter anything.
+  - attempts to learn and/or make use of information from the system but does not alter anything.
 - Inside
   - Initiated by an entity *inside* a security measure. Someone who is authorised and is supposed to be authorised (ligitimate) can access a servie or some data, but uses/shares it in a way unintended by the entity who granted the authorisation.  
 - Outside
@@ -113,7 +113,8 @@ Active, outside.
 **Ideally**: Preventing an attack from succeeding
 **Otherwise**: Detect failure and recover.
 
-Some counter measures may introduce new vulnerabilies. And there will probably still be vulnerabilies after one/some ountermeasure have been taken care of. This puts the assets at **risk**.
+Some counter measures may introduce new vulnerabilies. And there will probably still be vulnerabilies after one/some countermeasure have been taken care of.
+Vulnerabilities put the assets at **risk**.
 
 ## Security assumptions
 
@@ -121,7 +122,7 @@ Assumptions are potential vulnerability.
 
 ### Technical Assumptions
 
-**Stuxnet**: The attck on the Iranian uranium enrichment plant! The Assumption was - "No USB keys, therefore no entry point".
+**Stuxnet**: The attack on the Iranian uranium enrichment plant! The Assumption was - "No USB keys, therefore no entry point".
 
 ## Security goals (CIA(AA))
 
@@ -142,18 +143,18 @@ Meaning secrecy of data. "Preserving authorised restrivtions on information acce
 
 ### Integrity
 
-Ensuring assets can't be altered wo. permission. "Gaurding against immproper information modicifation or destruuction."
-May include ensuring *non-repuditation* and *authenticity*.
+Ensuring assets can't be altered wo. permission. "Guarding against improper information modification or destruction."
+May include ensuring *non-repudiation* and *authenticity*.
 
 >Non-repudiation is the assurance that someone cannot deny the validity of something. Non-repudiation is a legal concept that is widely used in information security and refers to a service, which provides proof of the origin of data and the integrity of the data. In other words, non-repudiation makes it very difficult to successfully deny who/where a message came from as well as the authenticity and integrity of that message.
 
 **Data integrity**:  Ensuring information isn't altered.
 
-Historical case: Queen Mary sends weakly encrypted message which leads to her revealing her accomplices.
+Historical case: Mary Queen of Scots sent weakly encrypted message which leads to her revealing her accomplices.
 
-**System ingegrity**: Unsuring a system works as intenden. Free from unintended or deliberate manipulation of system functions.
+**System integrity**: Insuring a system works as intended. Free from unintended or deliberate manipulation of system functions.
 
-"Historicl case": Calibrating the whiteboard incorrectly at school.
+"Historical case": Calibrating the whiteboard incorrectly at school.
 
 **Associated vulnerability**: Corruption
   
@@ -198,7 +199,7 @@ The attacker just needs to find the weakest link.
 > Having designed various security mechanisms, it is necessary to decide where to use them. This is true both in terms of physical placement (e.g., at what points in a network are certain security mechanisms needed) and in a logical sense [e.g., at what layer or layers of an architecture such as TCP/IP (Transmission Control
 Protocol/Internet Protocol) should mechanisms be placed].
 
-Even one all security measures are in place there is still one issue: ***The weakest point of cyber security is humans!***
+Even if all security measures are in place there is still one issue: ***The weakest point of cyber security is humans!***
 
 Also time!!!
 
@@ -220,7 +221,7 @@ Open design.
 - Does not mean open source.
 - The security of a system should ot depend on the security of the secrecy of the protection mechanism.
 - example: 2005 DRM (digital rights managment??). The system was broken within a month and turned out to be a way to....
-- Iowa is an example of why this is important
+- Iowa caucus app is an example of why this is important
 
 Minimum exposure
 
@@ -234,8 +235,8 @@ Least Privilege
 
 Fail safe default
 
-- In Die Hard the default should be a locked door. (In any other case it should be opposite for fire safety)
-- Permission rather than exclusion.
+- In Die Hard the vault default should be a locked door. (In any other case it should be opposite for fire safety)
+- **Permission rather than exclusion**.
 
 Complete mediation
 

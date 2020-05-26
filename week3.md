@@ -12,7 +12,7 @@ The key is split into 4-byte (32-bit) *words* (44 if key of length 128).
 
 - Not a feistel structure?
   - in which half of data is used to modify the other half. then it is swapped.
-- 4 distinct word of the key are serve as round key for each round.
+- 4 distinct word of the key serve as round key for each round.
 - 4 stages: 1 permutation, 3 substitution (details p 640)
   - **Substitute bytes**: uses table known as S-box to perform byte-by-byte sub
   - **Shift rows**: permutation performed row by row
@@ -47,11 +47,11 @@ As name states. protects agaist inverting attacks.
 
 The first appeance of public key cryptography. Enables two users to exchange a private key securely, which is used subsequently. Relies on the fact that discrete logarithms (def. 275) are hard to compute.
 
-## Digital Signature Standard (DSS)
+### Digital Signature Standard (DSS)
 
 Makes use of SHA-1. 1991, revised 1993.
 
-## Elliptic-curve cryptography (ECC)
+### Elliptic-curve cryptography (ECC)
 
 RSA. Takes a some processing to do w a secure bit-length.
 
@@ -101,7 +101,7 @@ Cipher Block Chaining: XOR w the initialization vector -> some block cipher encr
 
 pseudorandom permutation: the output of a secure cipher can't be distinguished
 
-Confusion: when you look at cipher text you should be able to determine anything about the key.
+Confusion: when you look at cipher text you should not be able to determine anything about the key.
 
 Diffussion: flipping *one* bit of the plain text should produce a flipping of half the bits of the cipher text.
 
@@ -123,7 +123,7 @@ Requires
 
 When you don't store the password, store the hash of the password. This is a bad idea tho. If two people have the same code you will be able to see it. brute force by dictionary.
 
-Salting: adding a random sequence (salt) to a passwaord before hashing.
+Salting: adding a random sequence (salt) to a password before hashing.
 
 Use a slow hash function.
 

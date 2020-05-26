@@ -31,8 +31,6 @@ The default for S/MIME encrypting is AES and RSA.
 
 TODO read page 686 again..
 
-## DOmainkeys identified mail
-
 ---
 
 ## Lecture notes
@@ -73,7 +71,7 @@ Chrome and Firefox would still rather use their own CRLs hardcoded in the browse
 
 Uses logs - think of it as certificate auditing.
 
-The log needs to be fact checked - thish is simply done by making the log an append only logs, this is done w merkel trees
+The log needs to be fact checked - this is simply done by making the log an append only logs, this is done w merkel trees
 
 #### Merkel trees
 
@@ -92,11 +90,11 @@ Appending new certificates is also done in O(log n)
 
 Goal is to provide confidentiality and data integrity, optional: Authentication
 
-C: symmetric encryption
-I: MAC (using hash function)
-A: Asym encryption
+- C: symmetric encryption
+- I: MAC (using hash function)
+- A: Asym encryption
 
-Not a single protocol but a suite of protocols
+SSL is not a single protocol but a suite of protocols
 
 ### Record protocol
 
